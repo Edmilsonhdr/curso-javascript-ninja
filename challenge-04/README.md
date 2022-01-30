@@ -1,4 +1,4 @@
-# Desafio da semana #4
+<!-- # Desafio da semana #4
 
 ```js
 /*
@@ -119,4 +119,4 @@ Qual a cor atual do carro?
 
 // Quantas pessoas temos no carro?
 ?
-```
+``` -->
