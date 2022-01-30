@@ -48,7 +48,7 @@ pessoa.fazerAniversario=()=>{return pessoa.idade++}
 // booleano que representa "verdadeiro";
 // */
 // ?
-    pessoa.andar=(mCaminhados)=>{(pessoa.caminhouQuantosMetros=pessoa.caminhouQuantosMetros+mCaminhados),pessoa.andando=true}
+    pessoa.andar=(mCaminhados)=>{(pessoa.caminhouQuantosMetros+=mCaminhados),pessoa.andando=true}
     
     
 // /*
@@ -56,8 +56,8 @@ pessoa.fazerAniversario=()=>{return pessoa.idade++}
 // da propriedade `andando` para o valor booleano que representa "falso".
 // */
 // ?
-    //pessoa.parar=()=>{pessoa.andando=false}
-    //pessoa.parar()
+    pessoa.parar=()=>{pessoa.andando=false}
+    pessoa.parar()
     
 // /*
 // Crie um método chamado `nomeCompleto`, que retorne a frase:
@@ -122,7 +122,7 @@ pessoa.fazerAniversario=()=>{return pessoa.idade++}
 pessoa.fazerAniversario()
 pessoa.fazerAniversario()
 pessoa.fazerAniversario()
-console.log(pessoa)
+
 
 // /*
 // Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
@@ -130,7 +130,7 @@ console.log(pessoa)
 // retornada)
 // */
 // ?
-    console.log(pessoa.mostrarIdade())//Olá, eu tenho 26 anos!
+pessoa.mostrarIdade()//Olá, eu tenho 26 anos!
 // /*
 // Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
 // com metragens diferentes passadas por parâmetro.
@@ -139,29 +139,31 @@ console.log(pessoa)
     pessoa.andar(20)
     pessoa.andar(50)
     pessoa.andar(60)
+    
 // /*
 // A pessoa ainda está andando? (Use a instrução para responder e comentários
 // inline ao lado da instrução para mostrar qual foi a resposta retornada)
 // */
 // ?
-
+    //andando true
 // /*
 // Se a pessoa ainda está andando, faça-a parar.
 // */
 // ?
+    pessoa.parar()
 
 // /*
 // E agora: a pessoa ainda está andando? (Use uma instrução para responder e
 // comentários inline ao lado da instrução para mostrar a resposta retornada)
 // */
 // ?
-
+    // andando false
 // /*
 // Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 // inline ao lado da instrução para mostrar a resposta retornada)
 // */
 // ?
-
+    //caminhouQuantosMetros:130
 // /*
 // Agora vamos deixar a brincadeira um pouco mais divertida! :D
 // Crie um método para o objeto `pessoa` chamado `apresentacao`. Esse método deve
@@ -180,7 +182,13 @@ console.log(pessoa)
 // correta, de acordo com os dados inseridos no objeto.
 // */
 // ?
-
+    pessoa.apresentacao=()=>{
+        return `Olá, eu sou o ${pessoa.nome} ${pessoa.sobrenome}, tenho ${pessoa.idade} anos, ${pessoa.altura}, meu peso é ${pessoa.peso} e, 
+        só hoje, eu já caminhei ${pessoa.caminhouQuantosMetros} metros!`
+    }
+    
 // // Agora, apresente-se ;)
 // ?
 // ```
+console.log(pessoa.apresentacao())//Olá, eu sou o Edmilson Henrique, tenho 26 anos, 1.73, meu peso é 82 e,
+//só hoje, eu já caminhei 130 metros!
