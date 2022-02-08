@@ -5,7 +5,7 @@
 // e imprima o nome desse campeonato no console.
 // */
 // // ?
-
+    var championship= "Campeonato Mineiro"
 // /*
 // Declare uma variável chamada `teams`, que receberá um array com 5 elementos.
 // Os elementos serão nomes de times do campeonato escolhido, e os nomes devem
@@ -13,8 +13,8 @@
 // desafio.
 // */
 // // ?
-
-// console.log( 'Times que estão participando do campeonato:', teams );
+    var teams=["Atletico","America","Caldense","Cruzeiro","Urt"]
+    console.log( 'Times que estão participando do campeonato:', teams );
 
 // /*
 // Crie uma função chamada `showTeamPosition` com as seguintes características:
@@ -33,19 +33,32 @@
 //     "Não temos a informação do time que está nessa posição."
 // */
 // // ?
-
+    function showTeamPosition(position){
+         if(position<6){
+             return`O time que está em ${position}º lugar é o ${teams[position-1]}`
+            }else{return `Não temos a informação do time que está nessa posição.`}
+    }
+    
 // /*
 // Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 // função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 // */
 // // ?
-
+console.log(showTeamPosition(1))
+console.log(showTeamPosition(2))
+console.log(showTeamPosition(3))
+teams.push("Guarani")
+console.log(teams)
+console.log(showTeamPosition(6))
 // /*
 // Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 // repetição "while".
 // */
 // // ?
-
+var num=20
+    while (num<31) {
+       console.log(num++) 
+    }
 // /*
 // Crie uma função chamada `convertToHex`, com as seguintes características:
 //     - A função recebe uma cor por parâmetro, do tipo string. Exemplo: "red";
@@ -59,8 +72,42 @@
 //     "Não temos o equivalente hexadecimal para [COR]."
 // */
 // // ?
+    function convertToHex(cor){
+        let corEscolhida=cor
+        switch (corEscolhida) {
+            case "Red":
+                console.log(`O hexadecimal para a cor ${corEscolhida} é #FF0000.`)
+                break;
+            case "Blue":
+                    console.log(`O hexadecimal para a cor ${corEscolhida} é #0000FF.`)
+                break;
+            case "OrangeRed":
+                console.log(`O hexadecimal para a cor ${corEscolhida} é #FF4500.`)
+                break;
+            case "Gold":
+                console.log(`O hexadecimal para a cor ${corEscolhida} é #FFD700.`)
+                break;
+            case "LightCyan":
+                console.log(`O hexadecimal para a cor ${corEscolhida} é #E0FFFF.`)
+                break;
 
+            default:
+                console.log(`Não temos o equivalente hexadecimal para ${corEscolhida}`)
+                break;
+        }
+    }
 // /*
 // Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 // */
 // // ?
+
+console.log(convertToHex("Red"))
+
+console.log(convertToHex("Green"))
+console.log(convertToHex("PowderBlue"))
+console.log(convertToHex("MintCream"))
+console.log(convertToHex("Bisque"))
+console.log(convertToHex("Tomato"))
+console.log(convertToHex("Brown"))
+console.log(convertToHex("Salmon"))
+console.log(convertToHex("Crimson"))
